@@ -6,10 +6,18 @@ import PokeService from './js/poke-service.js'
 
 function showPokemon(response) {
   if (response) {
-    const sprite = response["sprites"]["versions"]["generation-iii"]["firered-leafgreen"]["front_default"];
+    const sprite = response.sprites.front_default;
     console.log(sprite)
     $('#poke-results').text(response.name);
     $('#pokemon-img').html(`<img src="${sprite}">`);
+    // weight
+    // heigth
+    // random move -- maybe
+    // health
+    // type
+    // evolution tree
+    // weaknesses
+    // strengths
   }
 }
 
