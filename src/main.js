@@ -6,10 +6,10 @@ import PokeService from './js/poke-service.js'
 
 function showPokemon(response) {
   if (response) {
-    const sprite = response.sprites.front_default
-    console.log(response.sprites.front_default)
-    $('#poke-results').text(`${response.name}`)
-    $("#pokemonImg").append(`<img src="${sprite}"></img>`);
+    const sprite = response["sprites"]["versions"]["generation-iii"]["firered-leafgreen"]["front_default"];
+    console.log(sprite)
+    $('#poke-results').text(response.name);
+    $('#pokemon-img').html(`<img src="${sprite}">`);
   }
 }
 
