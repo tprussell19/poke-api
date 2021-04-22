@@ -7,28 +7,18 @@ import PokeService from './js/poke-service.js'
 function showPokemon(response) {
   if (response) {
     const sprite = response.sprites.front_default;
-    console.log(sprite)
-    $('#poke-results').html(`<li>${response.name}</li> <li>${response.height}</li> 
-    <li>${response.weight}</li> <li>${response.stats[0].base_stat}</li>`);
+    $('#poke-results').html(`<li>Name: ${response.name}</li> <li>Height: ${response.height} decimeters</li> 
+    <li>Weight: ${response.weight} hectograms</li> <li>HP: ${response.stats[0].base_stat}</li> <li>Attack: ${response.stats[1].base_stat}</li> <li>Defense: ${response.stats[2].base_stat}</li>`);
   
       for(let i = 0; i < response.types.length; i++){
-      $('#poke-results').append(`<li>${response.types[i].type.name}</li>`);
+      $('#poke-results').append(`<li>Types: ${response.types[i].type.name}</li>`);
       }
-    
-
-
-    
-    
 
     $('#pokemon-img').html(`<img src="${sprite}">`);
-    // weight
-    // height
     // random move -- maybe
-    // health
-    // type
     // evolution tree
-    // weaknesses
-    // strengths
+    // attack
+    // defense
   }
 }
 
