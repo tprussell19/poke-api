@@ -16,16 +16,25 @@
         </div>
         <button class="btn btn-success btn-lg" type="submit" id="get-pokemon">Pokémon me!</button>
       </form>
-      <div>
-        <ul id="poke-results">
-
-        </ul>
-      </div>
-      <div id="pokemon-img">
-      </div>
-      <div id="random-move">
-        <button class="btn btn-success btn-lg" id="get-move">Do a random move!</button>
-        <p id="executed-move"></p>
+      <div class="error"></div>
+      <div class="row">
+        <div class="col-md-4">
+          <ul id="poke-results">
+          </ul>
+          <div id="pokemon-img"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="buttons">
+            <button class="btn btn-success" id="up">Up</button>
+            <button class="btn btn-success" id="down">down</button>
+            <button class="btn btn-success" id="right">right</button>
+            <button class="btn btn-success" id="left">left</button>
+          </div>
+        </div>
+        <div class="col-md-4" id="random-move">
+          <button class="btn btn-success btn-lg" id="get-move">Do a random move!</button>
+          <p id="executed-move"></p>
+        </div>
       </div>
     </div>
 

@@ -8,7 +8,8 @@ export default class PokeService {
         return response.json();
       })
       .catch(function(error) {
-        return error;
+        console.log(error);
       })
+
   }
 }

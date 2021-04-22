@@ -1,3 +1,17 @@
-#random-move {
+#random-move, #buttons {
   display: none;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+#pokemon-img {
+  margin: auto;
+  display: block;
+}
+
+.error {
+  color: red;
+  font-weight: bolder;
 }
