@@ -8,10 +8,21 @@ function showPokemon(response) {
   if (response) {
     const sprite = response.sprites.front_default;
     console.log(sprite)
-    $('#poke-results').text(response.name);
+    $('#poke-results').html(`<li>${response.name}</li> <li>${response.height}</li> 
+    <li>${response.weight}</li> <li>${response.stats[0].base_stat}</li>`);
+  
+      for(let i = 0; i < response.types.length; i++){
+      $('#poke-results').append(`<li>${response.types[i].type.name}</li>`);
+      }
+    
+
+
+    
+    
+
     $('#pokemon-img').html(`<img src="${sprite}">`);
     // weight
-    // heigth
+    // height
     // random move -- maybe
     // health
     // type
